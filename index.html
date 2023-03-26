@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Farmaxx</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="icon" href="./recursos/bars-solid.svg">
+</head>
+<body>
+	<div class="container" id="main">
+		<header>
+			<a class="enlace active" data-id="0" data-href="#main">Inicio</a><a class="enlace" data-id="1" data-href="#Servicios">Servicios</a>
+			<h3 class="titulo">Farmaxx</h3>
+			<a class="enlace" data-id="2" data-href="#Nosotros">Nosotros</a><a class="enlace" data-id="3" data-href="#contactame">Contácto</a>
+			<span><img id="btn-menu-bars" src="./recursos/bars-solid.svg" alt=""></span>
+		</header>
+		<div class="menu-toggle">
+			<a class="enlace active" data-id="0" data-href="#main">Inicio</a><a class="enlace" data-id="1" data-href="#Servicios">Servicios</a>
+			<a class="enlace" data-id="2" data-href="#Nosotros">Nosotros</a><a class="enlace" data-id="3" data-href="#contactame">Contácto</a>
+		</div>
+		<section>
+			<div class="slider">
+				<div class="slide active"><p>En Farmaxx podrás encontrar los mejores productos médicos. <br><br><br> que farmaxx sea tu proveedor y tu socio.</p></div>
+				<div class="slide"></div>
+				<div class="slide"><p>Farmaxx vende las mejores marcas, cuidando la salud de nuestros clientes. <br><br></p><button>ver productos</button></div>
+				<div class="slide"></div>
+			</div>
+			<div class="controles">
+				<span class="slider-left"><img src="./recursos/arrow-alt-circle-left-solid.svg" alt=""></span>
+				<span class="slider-right"><img src="./recursos/arrow-alt-circle-right-solid.svg" alt=""></span>
+			</div>
+		</section>
+		<aside>
+			<h2>Artículos</h2>
+			<article><img src="./recursos/m1 (8).jpg" alt=""><p>Cómo cuidar mi piel de los rayos UV. <a href="">ver producto</a></p></article>
+			<article><img src="./recursos/m1 (7).jpg" alt=""><p>Porqué es importante consumir carbohidratos? <a href="">ver producto</a></p></article>
+			<article><img src="./recursos/m1 (4).jpg" alt=""><p><a href="">ver otros productos</a><p></article>
+		</aside>
+		<div class="sobre-mi" id="Nosotros">
+			<h2>Sobre Nosotros</h2><br>
+			<p>Farmaxx es una empresa distribuidora de productos médicos con cerca de 10 años al servicio de todo Lima, contamos con más de 20000 clientes en toda la región.</p>
+			<p>Nuestros servicios estan al alcance de todas las personas además que son de primera calidad, nuestros laboradores son totalmente capacitados y actualizados para así tener un mejor desempeño en sus labores y que nuestros clientes se sientan satisfechos.</p><br>
+			<p>Farmaxx brinda servicio todos los dias de lunes a sábado desde las 7:00 hasta las 19:00hs del día, además puedes cotizar tu pedido desde nuestra pagina web, whattsapp o acercandote a alguna de nuestras sedes en Lima.</p>
+			<p>Farmaxx te cuida para que tú cuides a los demás</p><br>
+			<button>consultar desde whattsapp</button><button>consulta web</button>
+			<div class="img-nos">
+				<img src="./recursos/m1 (5).jpg" alt="">
+				<img src="./recursos/m1 (6).jpg" alt="">
+				<img src="./recursos/m1 (4).jpg" alt="">
+			</div>
+		</div>
+		<div class="proyectos" id="Servicios">
+			<h2>Servicios</h2>
+			<br>
+			<p>Farmaxx es una empresa que distribuye productos médicos, contamos con personal muy capacitado y tenemos 3 sedes en Lima, nos puedes encontrar en los siguientes distritos:</p>
+			<ul><li>☼villa el salvador</li>
+			<li>☼chorrillos</li>
+			<li>☼cercado de lima</li></ul><br>
+			<p>Todos nuestros servicios se atienden desde las 7:00 hasta las 7:00 de la noche.</p>
+			<div class="content-proyectos">
+				<div class="proyecto"><p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Non, in.</p></div>
+				<div class="proyecto"><p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Non, in.</p></div>
+				<div class="proyecto"><p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Non, in.</p></div>
+			</div>
+		</div>
+		<div class="contactame" id="contactame">
+			<h2>Contácto</h2>
+			<form id="formweb" method="post" action="">
+				<label for="">Nombres: </label><input type="text" id="nameuser">
+				<label for="">Correo o telefono: </label><input type="text" id="nameadress">
+				<label for="">Asunto: </label><textarea id="msguser" name="" id="" cols="30" rows="5"></textarea>
+				<button type="submit">enviar</button>
+				<button type="reset">borrar</button>
+			</form>
+			<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik""></iframe>
+			<div class="datoscontacto">
+				<ul>Establecimientos en Lima:
+				<li>villa el salvador </li>
+				<li>chorrillos</li>
+				<li>cercado de lima</li>
+				<ul>Como nos encuentras en redes sociales:
+				<li>facebook <a href="">FarmaxxLima</a></li>
+				<li>Whattsapp <a href="">999 999 999</a></li>
+				<li>Mesenger <a href="">Farmaxx</a></li></ul>
+			</div>
+		</div>
+		<footer>
+			<div><p>Inicio</p><p>Nosotros</p><p>Servicios</p><p>contacto</p></div>
+			<ul>
+				<li><p>direccion: Lima-Peru</p></li>
+				<li><p>telefono: 999 999 999</p></li>
+			</ul>
+			<div class="redes"><a href="">facebook</a><a href="">Whattsapp</a><a href="">gmail</a></div>
+			<h3>Farmaxx</h3>
+		</footer>
+	</div>
+	<!-- <div class="sapo">
+		<div class="cabeza"></div>
+		<div class="ojo-l"></div>
+		<div class="ojo-r"></div>
+		<div class="fosas"></div>
+	</div> -->
+	<div class="btn-up"></div>
+	<div class="float-msg">
+		<ul><li class="wts"></li><li class="fb"></li></ul>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
+
+
+
