@@ -16,6 +16,17 @@ document.addEventListener("click",function(e){
 
 	}else if(e.target.matches(".titulo")){
 		location.reload()
+	}else if(e.target.matches("#shadow-mode")){
+		var majorcontainer=document.querySelector("body")
+		var imgbtnmode=document.querySelector("#shadow-mode")
+		let color=majorcontainer.style.backgroundColor
+		if (color=="palegoldenrod") {
+			majorcontainer.style.backgroundColor="white"
+			imgbtnmode.style.backgroundImage=`url("./recursos/dark-on.png")`
+		}else{
+			majorcontainer.style.backgroundColor="palegoldenrod"
+			imgbtnmode.style.backgroundImage=`url("./recursos/light-on.png")`
+		}	
 	}
 })
 
@@ -40,7 +51,39 @@ window.addEventListener("load",function(){
 	var slider=document.querySelector(".slider")
 	var nslide=0
 	var delay=true
+
+	//click arrow right
 	document.querySelector(".slider-right").onclick=()=>{
+		moveright()
+	}
+	//click arrow left
+	document.querySelector(".slider-left").onclick=()=>{
+		moveleft()
+	}
+	//draggable      mouseover mouseout mousemove keyup keydown keycode mouseup mousedown load scroll submit click onload
+	var cordenadaXmouseup
+	var cordenadaXmousedown
+	document.querySelector(".container section").onmousedown=(e)=>{
+		cordenadaXmousedown=e.clientX
+		//let cordenadaY=e.clientY
+	}
+	document.querySelector(".container section").onmouseup=(e)=>{
+		cordenadaXmouseup=e.clientX
+		if (cordenadaXmouseup>cordenadaXmousedown) {
+			moveleft()
+		} else if(cordenadaXmouseup<cordenadaXmousedown){
+			moveright()
+		} else{}
+	}
+	// document.querySelector(".container section").ontouchstart=(e)=>{
+	// 	console.log(e.clientX)
+	// }
+	// document.querySelector(".container section").ontouchend=(e)=>{
+	// 	console.log(e.clientX)
+	// }
+	
+	//function left and right
+	function moveright(){
 		slides[nslide].classList.remove("active")
 		nslide+=1
 		if (nslide>slides.length-1) {
@@ -50,7 +93,7 @@ window.addEventListener("load",function(){
 		slider.style.transform=`translateY(${-nslide*100}%)`
 		delay=false
 	}
-	document.querySelector(".slider-left").onclick=()=>{
+	function moveleft(){
 		slides[nslide].classList.remove("active")
 		nslide-=1
 		if (nslide<0) {
@@ -60,7 +103,7 @@ window.addEventListener("load",function(){
 		slider.style.transform=`translateY(${-nslide*100}%)`
 		delay=false
 	}
-
+	//move slider auto
 	setInterval(function(){
 		if (delay===false) {
 			delay=true

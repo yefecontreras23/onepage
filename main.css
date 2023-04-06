@@ -400,6 +400,16 @@ html::-webkit-scrollbar-thumb:hover{
 .container .contactame .datoscontacto li{
 	margin-left: 20px;
 }
+.container .contactame .datoscontacto ul #shadow-mode{
+	width: 30px;
+	height: 15px;
+	background-color: whitesmoke;
+	border-radius: 25%;
+	background-image: url("./recursos/dark-on.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 
 
